@@ -1,0 +1,30 @@
+{
+    "name": "onethirtyone/csv",
+    "description": "A laravel package to parse Excel or CSV files and enter into database",
+    "require": {
+        "laravel/framework": ">=5.4.0",
+        "maatwebsite/excel": "^2.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robb Fountain",
+            "email": "robb@131studios.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "onethirtyone\\csv\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "onethirtyone\\csv\\ServiceProvider"
+            ],
+            "aliases": {
+                "CSV": "onethirtyone\\csv\\Facade"
+            }
+        }
+    }
+}
