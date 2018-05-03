@@ -11,9 +11,12 @@ class ServiceProvider extends BaseServiceProvider
      *
      * @return void
      */
-    public function boot ()
+    public function boot()
     {
-
+        $this->publishes([
+            __DIR__ . '/config/csv.php' => config_path('csv.php'),
+        ]);
+        $this->mergeConfigFrom(__DIR__ . '/config/csv.php', 'csv');
     }
 
     /**
@@ -21,7 +24,7 @@ class ServiceProvider extends BaseServiceProvider
      *
      * @return void
      */
-    public function register ()
+    public function register()
     {
         $this->app->bind('csv', function () {
             return new csv();
