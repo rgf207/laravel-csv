@@ -42,5 +42,5 @@ return [
         ],
     ],
 
-    'default' => 'contact',
+    'default' => 'foo',
 ];
